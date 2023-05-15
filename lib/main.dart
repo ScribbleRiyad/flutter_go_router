@@ -70,6 +70,15 @@ class GoRouterTest extends StatelessWidget {
   
 
 // quary routing
+//  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
+//    GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
+//    GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
+//    GoRoute(name : RouteName.profilepage,path: "/profile", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
+//     data: state.queryParameters['data']!
+//    ),),
+
+
+// redirect
  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
    GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
    GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
