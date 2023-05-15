@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_route/screen/chat_screen.dart';
 import 'package:go_route/screen/home_screen.dart';
+import 'package:go_route/screen/profile_screen.dart';
 import 'package:go_router/go_router.dart';
 
 import 'screen/splash_screen.dart';
@@ -34,9 +36,23 @@ class GoRouterTest extends StatelessWidget {
 
 
 
-    final GoRouter routefunction =GoRouter (routes:[
- GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
-  GoRoute(path: "/home", builder: (context, state) => const HomeScreen(),),
+    final GoRouter routefunction =GoRouter (  initialLocation: "/" ,routes:[
+      //normal Routing
+//  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
+//   GoRoute(path: "/home", builder: (context, state) => const HomeScreen(),),
+//   GoRoute(path: "/profile", builder: (context, state) => const ProfieScreen(),),
+//   GoRoute(path: "/chat", builder: (context, state) => const ChatScreen(),),
+
+// child parents Routing
+ GoRoute(path: "/", builder: (context, state) => const SplashScreen(),
+  routes:[
+   GoRoute(path: "home", builder: (context, state) => const HomeScreen(),),
+  GoRoute(path: "profile", builder: (context, state) => const ProfieScreen(),),
+  GoRoute(path: "chat", builder: (context, state) => const ChatScreen(),)
+
+ ]),
+ 
+ 
     ] );
 
 }
