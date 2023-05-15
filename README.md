@@ -16,4 +16,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-go vs push different in flutter route
+
+🔰go vs push different in flutter route
+✅Think of go as a way to jump to a new route. This will modify the underlying navigation stack if the new route is not a sub-route of the old one. On the other hand, push will always push the destination route on top of the existing navigation stack.
