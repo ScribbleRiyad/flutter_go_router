@@ -7,8 +7,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text("Go Router")),
+    return  Scaffold(
+     body: Center(child: GestureDetector(child: const Text("Go Route"))),
     );
   }
 }
