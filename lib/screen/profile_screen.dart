@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 
+// ignore: must_be_immutable
 class ProfieScreen extends StatelessWidget {
-  const ProfieScreen({super.key});
+  String data;
+   ProfieScreen({super.key, required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +14,10 @@ class ProfieScreen extends StatelessWidget {
       child: Column(
          mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text("Go Profile page"),
+           Text("Hello $data"),
               ElevatedButton(onPressed: (){
                 //Two types of route
+                   
                     context.go("/chat");
                 // GoRouter.of(context).go("/chat"); 
             

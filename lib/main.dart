@@ -44,15 +44,29 @@ class GoRouterTest extends StatelessWidget {
 //   GoRoute(path: "/chat", builder: (context, state) => const ChatScreen(),),
 
 // child parents Routing
- GoRoute(path: "/", builder: (context, state) => const SplashScreen(),
-  routes:[
-   GoRoute(path: "home", builder: (context, state) => const HomeScreen(),),
-  GoRoute(path: "profile", builder: (context, state) => const ProfieScreen(),),
-  GoRoute(path: "chat", builder: (context, state) => const ChatScreen(),)
+//  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),
+//   routes:[
+//    GoRoute(path: "home", builder: (context, state) => const HomeScreen(),),
+//   GoRoute(path: "profile", builder: (context, state) => const ProfieScreen(),),
+//   GoRoute(path: "chat", builder: (context, state) => const ChatScreen(),)
 
- ]),
+// ] 
+    //pasing Parameter routing
+  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
+   GoRoute(path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
+   GoRoute(path: "/profile:data", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
+    data: state.pathParameters['data']!
+   ),
+   
+   
+   ),
+   GoRoute(path: "/chat", builder: (context, state) => const ChatScreen(),),
+  ]
+
+
+);
  
  
-    ] );
+   
 
 }
