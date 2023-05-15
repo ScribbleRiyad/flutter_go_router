@@ -57,7 +57,7 @@ class GoRouterTest extends StatelessWidget {
     //   }
     // },
     
-     errorBuilder: ( BuildContext context, GoRouterState state) => ErrorScreen(),
+     errorBuilder: ( BuildContext context, GoRouterState state) => const ErrorScreen(),
     routes:[
       //normal Routing
 //  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
