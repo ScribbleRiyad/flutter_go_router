@@ -5,9 +5,9 @@ import '../route/route_name.dart';
 
 
 // ignore: must_be_immutable
-class ProfieScreen extends StatelessWidget {
-  String data;
-   ProfieScreen({super.key, required this.data});
+class LoginScreen extends StatelessWidget {
+  
+   const LoginScreen({super.key,});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class ProfieScreen extends StatelessWidget {
                      
                       // context.go("/chat");
                   // GoRouter.of(context).go("/chat");
-                context.goNamed(RouteName.chatpage); 
+                context.goNamed(RouteName.homepage); 
               
                   },
                   

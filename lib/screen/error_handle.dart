@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
-import '../route/route_name.dart';
 
 
 // ignore: must_be_immutable
 class ErrorScreen extends StatelessWidget {
-  String data;
-   ErrorScreen({super.key, required this.data});
+ 
+   const ErrorScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
