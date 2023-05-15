@@ -2,7 +2,7 @@
 
 A new Flutter project.
 [Flutter Go Router Test](https://pub.dev/packages/go_router)        :- https://pub.dev/packages/go_router <br><br>
-<img src="https://i.ibb.co/p1CvBWr/profile-pic.png" width=50% height=50%><br><br>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
