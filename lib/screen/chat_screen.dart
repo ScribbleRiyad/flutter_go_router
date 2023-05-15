@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../route/route_name.dart';
+
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
 
@@ -16,9 +18,10 @@ class ChatScreen extends StatelessWidget {
       
              ElevatedButton(onPressed: (){
               
-                //Two types of route
-                    context.go("/");
+                //types of route
+                    // context.go("/");
               // GoRouter.of(context).go("/");
+                context.goNamed(RouteName.homepage); 
               }, child: const Text("Go to"))
           ],
         ),
