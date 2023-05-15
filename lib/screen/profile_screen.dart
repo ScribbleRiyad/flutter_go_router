@@ -11,25 +11,27 @@ class ProfieScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-    body: Center(
-      child: Column(
-         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-           Text("Hello $data"),
-              ElevatedButton(onPressed: (){
-                // types of route
-                   
-                    // context.go("/chat");
-                // GoRouter.of(context).go("/chat");
-              context.goNamed(RouteName.chatpage); 
-            
-                },
-                
-                 child: const Text("Go to"))
-        ],
+    return  SafeArea(
+      child: Scaffold(
+      body: Center(
+        child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+             Text("Hello $data"),
+                ElevatedButton(onPressed: (){
+                  // types of route
+                     
+                      // context.go("/chat");
+                  // GoRouter.of(context).go("/chat");
+                context.goNamed(RouteName.chatpage); 
+              
+                  },
+                  
+                   child: const Text("Go to"))
+          ],
+        ),
       ),
-    ),
+      ),
     );
   }
 }
