@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_route/route/route_name.dart';
 import 'package:go_route/screen/chat_screen.dart';
+import 'package:go_route/screen/error_handle.dart';
 import 'package:go_route/screen/home_screen.dart';
 import 'package:go_route/screen/profile_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -56,7 +57,7 @@ class GoRouterTest extends StatelessWidget {
     //   }
     // },
     
-    
+     errorBuilder: ( BuildContext context, GoRouterState state) => ErrorScreen(),
     routes:[
       //normal Routing
 //  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
@@ -99,11 +100,12 @@ class GoRouterTest extends StatelessWidget {
 
 
 // redirect
-
+//  GoRoute(name : RouteName.login ,path: "/login", builder: (context, state) => const LoginScreen(),),
  
- GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
+   GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
    GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
    GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
+  
    GoRoute(name : RouteName.profilepage,path: "/profile", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
     data: state.queryParameters['data']!
    ),),
