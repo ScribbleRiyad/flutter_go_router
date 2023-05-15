@@ -25,9 +25,9 @@ samples, guidance on mobile development, and a full API reference.
     final GoRouter routefunction =GoRouter (
     
     // redridect function
+    
+    
      redirect: (BuildContext context, GoRouterState state) {
-      
-      
        if(isboggedIn)
       
       {
@@ -37,6 +37,9 @@ samples, guidance on mobile development, and a full API reference.
          return "/chat";
        }
      },
+     
+     
+     // Error Builder 
     
      errorBuilder: ( BuildContext context, GoRouterState state) => const ErrorScreen(),
     routes:[
@@ -46,8 +49,11 @@ samples, guidance on mobile development, and a full API reference.
      GoRoute(path: "/profile", builder: (context, state) => const ProfieScreen(),),
      GoRoute(path: "/chat", builder: (context, state) => const ChatScreen(),),
 
+
+
      //Normar Routing
-     GoRoute(path: "/", builder: (context, state) => const SplashScreen(),
+     
+    GoRoute(path: "/", builder: (context, state) => const SplashScreen(),
     routes:[
     GoRoute(path: "home", builder: (context, state) => const HomeScreen(),),
     GoRoute(path: "profile", builder: (context, state) => const ProfieScreen(),),
@@ -55,14 +61,18 @@ samples, guidance on mobile development, and a full API reference.
 
 
     //pasing Parameter routing
+    
     GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
     GoRoute(path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
     GoRoute(path: "/chat", builder: (context, state) => const ChatScreen(),),
     GoRoute(path: "/profile:data", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
-     data: state.pathParameters['data']!
+    data: state.pathParameters['data']!
     ),),
 
+
+
     //Named Routing
+    
     GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
     GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
     GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),)
@@ -71,21 +81,21 @@ samples, guidance on mobile development, and a full API reference.
   
 
     // quary routing
+    
     GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
     GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
     GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
-     GoRoute(name : RouteName.profilepage,path: "/profile", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
-     data: state.queryParameters['data']!
+    GoRoute(name : RouteName.profilepage,path: "/profile", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
+    data: state.queryParameters['data']!
     ),),
 
 
     // redirect
+    
     GoRoute(name : RouteName.login ,path: "/login", builder: (context, state) => const LoginScreen(),),
- 
     GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
     GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
     GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
-  
     GoRoute(name : RouteName.profilepage,path: "/profile", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
     data: state.queryParameters['data']!
     ),),
