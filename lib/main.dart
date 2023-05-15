@@ -21,6 +21,9 @@ void main() async {
 class GoRouterTest extends StatelessWidget {
    GoRouterTest({Key? key}) : super(key: key);
 
+
+ final isboggedIn = true;
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
@@ -37,7 +40,24 @@ class GoRouterTest extends StatelessWidget {
 
 
 
-    final GoRouter routefunction =GoRouter (  initialLocation: "/" ,routes:[
+    final GoRouter routefunction =GoRouter (
+    
+    // redridect function
+  //    redirect: (BuildContext context, GoRouterState state) {
+      
+      
+  //     if(isboggedIn)
+      
+  //     {
+  //  return "/home";
+  //     }
+    //   else{
+    //      return "/chat";
+    //   }
+    // },
+    
+    
+    routes:[
       //normal Routing
 //  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
 //   GoRoute(path: "/home", builder: (context, state) => const HomeScreen(),),
@@ -79,6 +99,8 @@ class GoRouterTest extends StatelessWidget {
 
 
 // redirect
+
+ 
  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
    GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
    GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
