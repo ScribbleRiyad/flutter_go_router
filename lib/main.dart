@@ -63,8 +63,8 @@ class GoRouterTest extends StatelessWidget {
   //Named Route
  GoRoute(path: "/", builder: (context, state) => const SplashScreen(),),
    GoRoute(  name :RouteName.homepage   ,path: "/home", builder: (BuildContext context, GoRouterState state) => const HomeScreen(),),
-   GoRoute(name : RouteName.profilepage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
-   GoRoute(name : RouteName.chatpage,path: "/profile:data", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
+   GoRoute(name : RouteName.chatpage ,path: "/chat", builder: (context, state) => const ChatScreen(),),
+   GoRoute(name : RouteName.profilepage,path: "/profile:data", builder: ( BuildContext context, GoRouterState state) =>  ProfieScreen(
     data: state.pathParameters['data']!
    ),),
 
