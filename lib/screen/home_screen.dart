@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:go_route/route/route_name.dart';
 import 'package:go_router/go_router.dart';
 
@@ -21,7 +19,8 @@ class HomeScreen extends StatelessWidget {
               //  String data = "Riyad";
                     
               // context.go("/profile$data");
-              context.goNamed(RouteName.profilepage, pathParameters: {"data":"riyad"});
+              // context.goNamed(RouteName.profilepage, pathParameters: {"data":"riyad"});
+              context.goNamed(RouteName.profilepage, queryParameters: {"data":"riyad"});
               
               }, child: const Text("Go to"))
          ],
